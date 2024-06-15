@@ -1,0 +1,20 @@
+{{ define "article-form" }}
+<form
+  hx-post="/articles"
+  hx-target="#article-section"
+  hx-select="#article-section"
+  hx-on:after-request="this.reset()"
+>
+    <label>
+        Title
+        <input type="text" name="title" id="title" />
+    </label>
+    <label>
+        Content
+        <textarea name="content" id="content"></textarea>
+    </label>
+
+        <input type="submit" value="Submit" />
+
+</form>
+{{ end }}

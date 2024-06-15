@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{- template "head" "All Articles" -}}
+</head>
+<body>
+    <main class="container grid">
+        {{- template "article-form" -}}
+        <section id="article-section">
+            <h1>All Articles</h1>
+            {{ range . }}
+             {{- template "article-card" . -}}
+            {{ end }}
+        </section>
+    </main>
+</body>
+</html>
